@@ -1,9 +1,12 @@
 # DynamoDBHelloWorld
 
 ### Prerequisite
-```bash 
 
-# STEP 0) Confug AWS 
+<details>
+<summary>Prerequisite</summary>
+
+```bash 
+# STEP 0) Config AWS 
 $ aws configure
 # AWS Access Key ID [****************HQ6I]: 
 # AWS Secret Access Key [****************A3B0]: 
@@ -22,6 +25,8 @@ $ java -Djava.library.path=./DynamoDBLocal_lib -jar DynamoDBLocal.jar -sharedDb
 $ aws dynamodb list-tables --endpoint-url http://localhost:8000
 
 ```
+
+</details>
 
 ### Quick start 
 ```bash 
