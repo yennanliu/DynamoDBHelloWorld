@@ -28,9 +28,9 @@ $ aws dynamodb list-tables --endpoint-url http://localhost:8000
 
 </details>
 
-### Quick start 
+### Quick start  (model movie data)
 ```bash 
-
+$ cd model_movie_data
 # STEP 1) Create table 
 $ python MoviesCreateTable.py     
 
