@@ -13,7 +13,7 @@ done
 
 
 # Weite Throttle
-for i in {1..50};
+for i in {1..100};
 do
     aws dynamodb batch-write-item --request-items file://WeatherData3.json
 done
