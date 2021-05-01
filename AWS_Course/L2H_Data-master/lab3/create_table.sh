@@ -9,7 +9,11 @@ aws dynamodb create-table --cli-input-json '
     },
     "KeySchema": [
         {
-            "AttributeName": "request_id",
+            "AttributeName": "movie_id",
+            "KeyType": "HASH"
+        },
+        {
+            "AttributeName": "user_id",
             "KeyType": "HASH"
         },
         {
@@ -19,7 +23,15 @@ aws dynamodb create-table --cli-input-json '
     ],
     "AttributeDefinitions": [
         {
+            "AttributeName": "request_id",
+            "AttributeType": "S"
+        },
+        {
             "AttributeName": "user_id",
+            "AttributeType": "S"
+        },
+        {
+            "AttributeName": "movie_id",
             "AttributeType": "S"
         },
         {
@@ -33,7 +45,7 @@ aws dynamodb create-table --cli-input-json '
 
 sleep 30
 
-for i in {1..13};
+for i in {1..50};
 do
     aws dynamodb batch-write-item --request-items file://MovieData$i.json
 done
